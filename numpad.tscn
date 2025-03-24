@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://b03loy4w5d1vu"]
+
+[ext_resource type="PackedScene" uid="uid://cftkvp7yud7g1" path="res://event_button.tscn" id="1_jcua2"]
+[ext_resource type="Script" path="res://Numpad.cs" id="1_nu25q"]
+
+[node name="Numpad" type="GridContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+columns = 3
+script = ExtResource("1_nu25q")
+
+[node name="EventButton" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "7"
+ButtonValue = "7"
+
+[node name="EventButton2" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "8"
+ButtonValue = "8"
+
+[node name="EventButton3" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "9"
+ButtonValue = "9"
+
+[node name="EventButton4" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "4"
+ButtonValue = "4"
+
+[node name="EventButton5" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "5"
+ButtonValue = "5"
+
+[node name="EventButton6" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "6"
+ButtonValue = "6"
+
+[node name="EventButton7" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "1"
+ButtonValue = "1"
+
+[node name="EventButton8" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "2"
+ButtonValue = "2"
+
+[node name="EventButton9" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+text = "3"
+ButtonValue = "3"
+
+[node name="EventButton10" parent="." instance=ExtResource("1_jcua2")]
+layout_mode = 2
+ButtonValue = "0"
+
+[node name="UndoButton" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "⮌"
+
+[node name="ClearButton" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "C"

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://xoegwtmgi621"]
+
+[ext_resource type="Script" path="res://RootScene.cs" id="1_dy1nq"]
+[ext_resource type="PackedScene" uid="uid://b03loy4w5d1vu" path="res://numpad.tscn" id="2_nxvwm"]
+
+[node name="RootScene" type="Control" node_paths=PackedStringArray("ResultLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dy1nq")
+ResultLabel = NodePath("VBoxContainer/ResultLabel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 130
+text = "0000000"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Numpad" parent="VBoxContainer" instance=ExtResource("2_nxvwm")]
+layout_mode = 2
