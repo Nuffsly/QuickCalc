@@ -12,6 +12,9 @@ public partial class Numpad : GridContainer
     
     [Signal]
     public delegate void ClearButtonInputEventHandler();
+
+    [Signal]
+    public delegate void UndoButtonInputEventHandler();
     
     public override void _Ready()
     {
@@ -25,6 +28,8 @@ public partial class Numpad : GridContainer
             }
             if (child is Button button && button.Name == "ClearButton")
                 button.Pressed += EmitClearButtonInputEvent;
+            if (child is Button button2 && button2.Name == "UndoButton")
+                button2.Pressed += EmitUndoButtonInputEvent;
         }
     }
 
@@ -74,5 +79,10 @@ public partial class Numpad : GridContainer
     private void EmitClearButtonInputEvent()
     {
         EmitSignal(SignalName.ClearButtonInput);
+    }
+
+    private void EmitUndoButtonInputEvent()
+    {
+        EmitSignal(SignalName.UndoButtonInput);
     }
 }
