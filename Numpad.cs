@@ -21,10 +21,16 @@ public partial class Numpad : GridContainer
             {
                 eventButton.MouseEnteredValueButton += MouseEnteredValueButton;
                 eventButton.MouseExitedValueButton += MouseExitedValueButton;
+                eventButton.ValueButtonsInput += MouseClickedValueButton;
             }
             if (child is Button button && button.Name == "ClearButton")
                 button.Pressed += EmitClearButtonInputEvent;
         }
+    }
+
+    private void MouseClickedValueButton(int value)
+    {
+        _mouseOverValue = value;
     }
 
     public override void _Input(InputEvent inputEvent)
@@ -35,7 +41,7 @@ public partial class Numpad : GridContainer
         {
             // When pressed, add whatever number is currently moused over.
             _currentValue += _mouseOverValue?.ToString() ?? "";
-            // Set to null so user has to enter a new number before releasing to get double digit mode.
+            // Set to null so user has to enter a new number before releasing to get double-digit mode.
             _mouseOverValue = null;
         }
         else
