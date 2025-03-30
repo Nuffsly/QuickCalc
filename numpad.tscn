@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b03loy4w5d1vu"]
+[gd_scene load_steps=4 format=3 uid="uid://b03loy4w5d1vu"]
 
 [ext_resource type="PackedScene" uid="uid://cftkvp7yud7g1" path="res://event_button.tscn" id="1_jcua2"]
 [ext_resource type="Script" path="res://Numpad.cs" id="1_nu25q"]
+[ext_resource type="FontFile" uid="uid://dec5mw72do6cn" path="res://resources/google_materials_icon_font.ttf" id="3_13abt"]
 
 [node name="Numpad" type="GridContainer"]
 anchors_preset = 15
@@ -64,8 +65,11 @@ ButtonValue = "0"
 
 [node name="UndoButton" type="Button" parent="."]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_13abt")
 theme_override_font_sizes/font_size = 100
-text = "⮌"
+text = "undo"
+icon_alignment = 1
+expand_icon = true
 
 [node name="ClearButton" type="Button" parent="."]
 layout_mode = 2

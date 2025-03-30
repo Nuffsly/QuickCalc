@@ -22,3 +22,6 @@ mono_crash.*.json
 *.keystore
 *.apk
 *.idsig
+
+# Resource File ignores
+*.zip
